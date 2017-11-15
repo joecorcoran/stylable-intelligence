@@ -13,6 +13,7 @@ addons:
   apt:
     packages:
       - libsecret-1-dev
+      - libnss3
       
 before_install:
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
@@ -22,7 +23,6 @@ before_install:
     fi
 
 install:
-  - apt-get --only-upgrade install libnss3
   - npm install
 
 script:
